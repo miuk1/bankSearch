@@ -19,13 +19,14 @@
             <button class="btn fav-icon" @click="removeFav(bank)" title="Remove Favorite"><img src="~assets/images/remove.png" alt="Favorite"></button>
           </div>
           </div>
-          <br />
+        </div>
+        
+      </div>
+      <br />
           <nuxt-link
               to="/"
               class="btn btn-primary"
             >Go Back</nuxt-link>
-        </div>
-      </div>
       </div>
   </div>
 </template>
