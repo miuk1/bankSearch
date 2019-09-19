@@ -119,7 +119,7 @@ export default {
   background-color: rgb(164, 205, 252);
 }
   .col-sm-3{
-    margin-bottom: 10px;
+    padding: 10px;
   }
 
   .card{
