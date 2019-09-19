@@ -16,7 +16,9 @@
         </div>
       </div>
       <div class="row">
-        <p v-if="!paginateData.length">No results :(</p>
+        <p v-if="!paginateData.length">
+          <img class="loader" src="~/assets/images/loader.gif" alt="Loading">
+        </p>
         <div v-for="bank in paginateData" :key="bank.ifsc" class="col-sm-3">
           <div class="card p-3">
           <img src="~/assets/images/bank.png" class="card-img-top" />
@@ -58,7 +60,8 @@ export default {
   data() {
     return {
       query: "",
-      pageNumber: 0
+      pageNumber: 0,
+      loading: true
     };
   },
   props: {
@@ -77,6 +80,7 @@ export default {
     paginateData() {
       let start = this.pageNumber * this.size;
       let end = start + this.size;
+      this.loading = false;
       return this.filteredList.slice(start, end);
     },
     filteredList() {
@@ -160,6 +164,12 @@ export default {
 
 .fav-icon img{
   width: 20px;
+}
+
+.loader{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>>
 
