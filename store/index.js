@@ -2,7 +2,7 @@ import axios from 'axios'
 const apiUrl = 'https://vast-shore-74260.herokuapp.com/banks?city=MUMBAI'
 const config = {
   headers:{
-    'Access-Control-Allow-Origin':'*'
+    'Access-Control-Allow-Origin':'http://findyourbank.herokuapp.com'
   }
 }
 const state = () => ({ banks: [] })
@@ -12,6 +12,7 @@ const mutations = {
 }
 const actions = {
   async fetchBanks({ commit }) {
+    print("XXXI am HereXXX")
     const response = await axios.get(apiUrl, config)
     commit('setBanks', response.data)
   }
