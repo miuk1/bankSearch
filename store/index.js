@@ -1,5 +1,10 @@
 import axios from 'axios'
 const apiUrl = 'https://vast-shore-74260.herokuapp.com/banks?city=MUMBAI'
+const config = {
+  headers:{
+    'Access-Control-Allow-Origin':'*'
+  }
+}
 const state = () => ({ banks: [] })
 
 const mutations = {
@@ -7,7 +12,7 @@ const mutations = {
 }
 const actions = {
   async fetchBanks({ commit }) {
-    const response = await axios.get(apiUrl)
+    const response = await axios.get(apiUrl, config)
     commit('setBanks', response.data)
   }
 }
