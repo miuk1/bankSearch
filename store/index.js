@@ -1,4 +1,5 @@
 import axios from 'axios'
+//api url to get list of banks
 const apiUrl = 'https://vast-shore-74260.herokuapp.com/banks?city=MUMBAI'
 const state = () => ({ banks: [] })
 
