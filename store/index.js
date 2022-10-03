@@ -12,7 +12,7 @@ const mutations = {
 }
 const actions = {
   async fetchBanks({ commit }) {
-    print("XXXI am HereXXX")
+    console.log("Hi I am her!!")
     const response = await axios.get(apiUrl, config)
     commit('setBanks', response.data)
   }
