@@ -1,6 +1,7 @@
 # bankSearch
 
-> Bank search application  https://findyourbank.herokuapp.com/
+> Simple Bank search application built with Nuxt.js
+> Included features - search bar, pagination and save favourite bank.
 
 ## Build Setup
 
